@@ -1,0 +1,270 @@
+jshell> someString.length()
+$42 ==> 27
+
+jshell> someString.charAt(5)
+$43 ==> 'i'
+
+jshell> for (int i=0; i<someString.length(); i++) {
+   ...>     System.out.println(someString.charAt(i));
+   ...> }
+T
+h
+i
+s
+
+i
+s
+
+a
+
+l
+o
+t
+
+o
+f
+
+t
+e
+x
+t
+
+a
+g
+a
+i
+n
+
+jshell> someString.indexOf("lot")
+$45 ==> 10
+
+jshell> someString.charAt("10")
+|  Error:
+|  incompatible types: java.lang.String cannot be converted to int
+|  someString.charAt("10")
+|                    ^--^
+
+jshell> someString.charAt(10)
+$46 ==> 'l'
+
+jshell> someString.charAt('i')
+|  Exception java.lang.StringIndexOutOfBoundsException: String index out of range: 105
+|        at StringLatin1.charAt (StringLatin1.java:48)
+|        at String.charAt (String.java:711)
+|        at (#47:1)
+
+jshell> someString.indexOf('d')
+$48 ==> -1
+
+jshell> someString.indexOf('t')
+$49 ==> 12
+
+jshell> someString.lastIndexOf('i')
+$50 ==> 25
+
+jshell> someString.contains("Text")
+$51 ==> false
+
+jshell> someString.contains("text")
+$52 ==> true
+
+jshell> someString.startsWith("This")
+$53 ==> true
+
+jshell> someString.endsWith("vrvwev")
+$54 ==> false
+
+jshell> someString.endsWith("again")
+$55 ==> true
+
+jshell> someString.isEmpty()
+$56 ==> false
+
+jshell> "".isEmpty()
+$57 ==> true
+
+jshell> "true".equals("true")
+$58 ==> true
+
+jshell> "value".equals("value")
+$59 ==> true
+
+jshell> String str = "value"
+str ==> "value"
+
+jshell> str.equals("value")
+$61 ==> true
+
+jshell> str.equalsIgnoreCase("value")
+$62 ==> true
+
+jshell> str.equalsIgnoreCase("Value")
+$63 ==> true
+
+jshell> String str = "in28Minutes"
+str ==> "in28Minutes"
+
+jshell> str.concat(" is awesome");
+$65 ==> "in28Minutes is awesome"
+
+jshell> str
+str ==> "in28Minutes"
+
+jshell> String anotherString = str.concat(" is awesome");
+anotherString ==> "in28Minutes is awesome"
+
+jshell> str
+str ==> "in28Minutes"
+
+jshell> anotherString
+anotherString ==> "in28Minutes is awesome"
+
+
+jshell> String string2= anotherString.concat(".");
+string2 ==> "in28Minutes is awesome."
+
+jshell> str
+str ==> "in28Minutes"
+
+jshell> anotherString
+anotherString ==> "in28Minutes is awesome"
+
+jshell> string2
+string2 ==> "in28Minutes is awesome."
+
+jshell> String str = "in28Minutes is awesome."
+str ==> "in28Minutes is awesome."
+
+jshell> str.toUpperCase()
+$75 ==> "IN28MINUTES IS AWESOME."
+
+jshell> str.toLowerCase()
+$76 ==> "in28minutes is awesome."
+
+jshell> String str2 = "      in28Minutes is awesome.    "
+str2 ==> "      in28Minutes is awesome.    "
+
+jshell> str2.trim()
+$79 ==> "in28Minutes is awesome."
+
+
+
+139.Step 6-
+jshell> 1+2
+$80 ==> 3
+
+jshell> "1"  + "5"
+$81 ==> "15"
+
+jshell> "1"  + 5
+$82 ==> "15"
+
+jshell> "1"  + 55
+$83 ==> "155"
+
+jshell> 1  + 55
+$84 ==> 56
+
+jshell> 1 + 4  + "5"
+$85 ==> "55"
+
+jshell> "1"  + 5 + 8
+$86 ==> "158"
+
+jshell> System.out.println("Value is " +20)
+Value is 20
+
+jshell> System.out.println("Value is " +20 +20)
+Value is 2020
+
+jshell> System.out.println("Value is " +(20 +20))
+Value is 40
+
+jshell> String.join(",", "2", "3", "4")
+$90 ==> "2,3,4"
+
+jshell> String.join(",", "A", "B", "C")
+$91 ==> "A,B,C"
+
+jshell> String.join(",", "", "A")
+$92 ==> ",A"
+
+jshell> String.join(",", "A")
+$93 ==> "A"
+
+jshell> String.join(",", "A", "B")
+$94 ==> "A,B"
+
+jshell> "abcd".replace('a', 'z');
+$95 ==> "zbcd"
+
+
+jshell> "abcd".replace("ab", "xyz");
+$96 ==> "xyzcd"
+
+
+jshell> String str = "abchgs "
+str ==> "abchgs "
+
+jshell> String.                 (press . and tab)
+CASE_INSENSITIVE_ORDER   class
+copyValueOf(             format(
+join(                    valueOf(
+
+
+jshell> str.                         (press . and tab)
+charAt(                chars()                codePointAt(
+codePointBefore(       codePointCount(        codePoints()
+compareTo(             compareToIgnoreCase(   concat(
+contains(              contentEquals(         describeConstable()
+endsWith(              equals(                equalsIgnoreCase(
+formatted(             getBytes(              getChars(
+getClass()             hashCode()             indent(
+indexOf(               intern()               isBlank()
+isEmpty()              lastIndexOf(           length()
+lines()                matches(               notify()
+notifyAll()            offsetByCodePoints(    regionMatches(
+repeat(                replace(               replaceAll(
+replaceFirst(          resolveConstantDesc(   split(
+startsWith(            strip()                stripIndent()
+stripLeading()         stripTrailing()        subSequence(
+substring(             toCharArray()          toLowerCase(
+toString()             toUpperCase(           transform(
+translateEscapes()     trim()                 wait(
+
+
+
+
+
+140.Step 7-
+jshell> "123" + "123" + "1234" + "12345"
+$1 ==> "123123123412345"
+
+jshell> StringBuffer sb = new StringBuffer("Test");
+sb ==> Test
+
+jshell> sb.append
+|  Error:
+|  cannot find symbol
+|    symbol:   variable append
+|  sb.append
+|  ^-------^
+
+jshell> sb.append(" 123")
+$3 ==> Test 123
+
+jshell> sb
+sb ==> Test 123
+
+jshell> sb.setCharAt(1, 'E')
+
+jshell> sb
+sb ==> TEst 123
+
+jshell> sb.setCharAt(1, 'e')
+
+jshell> sb
+sb ==> Test 123
+
+jshell> StringBuilder sb=new StringBuilder("test");
+sb ==> test

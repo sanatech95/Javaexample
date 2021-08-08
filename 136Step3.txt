@@ -1,0 +1,82 @@
+jshell> i
+i ==> 11
+
+jshell> class Animal {
+   ...>     int id;
+   ...>     Animal (int id) {
+   ...>         this.id =id;
+   ...>     }
+   ...> }
+|  created class Animal
+
+jshell> Animal dog = new Animal(12);
+dog ==> Animal@4d76f3f8
+
+jshell> Animal cat = new Animal(13);
+cat ==> Animal@23ab930d
+
+jshell> Animal nothing;
+nothing ==> null
+
+jshell> nothing = cat;
+nothing ==> Animal@23ab930d
+
+jshell> nothing.id = 10
+$24 ==> 10
+
+jshell> cat.id;
+$25 ==> 10
+
+jshell> nothing = dog;
+nothing ==> Animal@4d76f3f8
+
+jshell> nothing.id
+$27 ==> 12
+
+jshell> "Test".length()
+$28 ==> 4
+
+jshell> String str = "Test"
+str ==> "Test"
+
+jshell> BigDecimal bd= new BigDecimal("1.0");
+bd ==> 1.0
+
+jshell> String str = new String("Test")
+str ==> "Test"
+
+jshell> String str = "Test"
+str ==> "Test"
+
+jshell> str.charAt(0)
+$33 ==> 'T'
+
+jshell> str.charAt(2)
+$34 ==> 's'
+
+jshell> str.charAt(3)
+$35 ==> 't'
+
+jshell> String biggestString = "This is a lot of text"
+biggestString ==> "This is a lot of text"
+
+jshell>  biggestString.substring(5,13)
+$37 ==> "is a lot"
+
+jshell> str.charAt(12)
+|  Exception java.lang.StringIndexOutOfBoundsException: String index out of range: 12
+|        at StringLatin1.charAt (StringLatin1.java:48)
+|        at String.charAt (String.java:711)
+|        at (#38:1)
+
+jshell>  biggestString.charAt(13)
+$39 ==> ' '
+
+jshell> str.charAt(89)
+|  Exception java.lang.StringIndexOutOfBoundsException: String index out of range: 89
+|        at StringLatin1.charAt (StringLatin1.java:48)
+|        at String.charAt (String.java:711)
+|        at (#40:1)
+
+jshell> String someString = "This is a lot of text again"
+someString ==> "This is a lot of text again"
